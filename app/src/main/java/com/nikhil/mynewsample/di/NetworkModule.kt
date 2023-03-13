@@ -45,12 +45,14 @@ object NetworkModule {
         gsonConverterFactory: GsonConverterFactory
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("")
+            .baseUrl("https://imdb-api.com/en/")
             .client(okHttpClient)
             .addConverterFactory(gsonConverterFactory)
             .build()
     }
 
+    @Provides
+    @Singleton
     fun provideApiService(retrofit: Retrofit)= retrofit.create(APIInterface::class.java)
 
 }

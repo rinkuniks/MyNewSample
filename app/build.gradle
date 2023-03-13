@@ -32,6 +32,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    
+    buildFeatures{
+        dataBinding true // for data binding
+        viewBinding true // for view binding
+    }
+
 }
 
 dependencies {
@@ -47,8 +53,6 @@ dependencies {
     implementation "com.google.dagger:hilt-android:${supportLibraries.hilt}"
     kapt "com.google.dagger:hilt-compiler:${supportLibraries.hilt}"
 
-//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
-//    kapt "androidx.hilt:hilt-compiler:1.0.0"
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:${supportLibraries.retrofit}"
     implementation "com.squareup.retrofit2:converter-gson:${supportLibraries.retrofit}"
@@ -58,6 +62,10 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:${supportLibraries.lifecycle_version}"
     implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:${supportLibraries.lifecycle_version}"
     implementation "androidx.lifecycle:lifecycle-common-java8:${supportLibraries.lifecycle_version}"
+    // viewModels to use by viewModels()
+    implementation 'androidx.activity:activity-ktx:1.6.1'
+    implementation 'androidx.fragment:fragment-ktx:1.5.5'
+
     // optional - Test helpers for LiveData
     testImplementation "androidx.arch.core:core-testing:${supportLibraries.arch_version}"
     // optional - Test helpers for Lifecycle runtime
