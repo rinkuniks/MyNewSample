@@ -70,5 +70,6 @@ dependencies {
     testImplementation "androidx.arch.core:core-testing:${supportLibraries.arch_version}"
     // optional - Test helpers for Lifecycle runtime
     testImplementation "androidx.lifecycle:lifecycle-runtime-testing:${supportLibraries.lifecycle_version}"
+    implementation "com.airbnb.android:lottie:3.4.0"
 
 }

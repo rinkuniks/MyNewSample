@@ -15,7 +15,7 @@ class LoginViewModel @Inject constructor(
 
     fun loginApi() {
         Log.d(TAG, "loginApi:2 ")
-        loginRepo.authoriseLoginDetails()
+//        loginRepo.authoriseLoginDetails()
     }
 
 }
