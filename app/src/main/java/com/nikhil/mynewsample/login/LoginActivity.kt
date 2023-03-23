@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
 //        setContentView(R.layout.activity_main)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.dataProvider = viewModel
-        binding.btnLogin.text = "abc"
+        binding.btnLogin.text = "Login"
         binding.btnLogin.setOnClickListener {
             enableLoginDetails()
         }
