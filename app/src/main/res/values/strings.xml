@@ -4,4 +4,14 @@
     <string name="enter_email">Enter Email</string>
     <string name="login">Login</string>
     <string name="create_your_account">Create Your Account</string>
+    <string name="complete_your_profile">Complete Your Profile</string>
+    <string name="let_s_get_you_all_setup_so_you_can_verify_your_personal_account">Let\'s get you all setup so you can verify your personal account.</string>
+    <string name="select_semester">Select Semester</string>
+    <string name="select_university">Select University</string>
+    <string name="select_stream">Select Stream</string>
+    <string name="select_exam">Select Exam</string>
+    <string name="enter_date_of_birth">Enter Date Of Birth</string>
+    <string name="enter_full_name">Enter Full Name</string>
+    <string name="proceed">Proceed</string>
+    <string name="skip_for_now">Skip For Now</string>
 </resources>
