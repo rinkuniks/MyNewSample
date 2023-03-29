@@ -9,7 +9,6 @@ import androidx.databinding.DataBindingUtil
 import com.nikhil.mynewsample.R
 import com.nikhil.mynewsample.databinding.ActivityLoginBinding
 import com.nikhil.mynewsample.screen.register.RegisterActivity
-import com.nikhil.mynewsample.screen.register.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -1,11 +1,9 @@
-package com.nikhil.mynewsample.screen.register.login
+package com.nikhil.mynewsample.screen.login
 
-import android.database.Observable
 import android.util.Log
 import androidx.lifecycle.LiveData
 import com.nikhil.mynewsample.DataResource
 import com.nikhil.mynewsample.NetworkResource
-import com.nikhil.mynewsample.di.NetworkModule
 import javax.inject.Inject
 
 class LoginRepo @Inject constructor(var loginService: LoginService) {

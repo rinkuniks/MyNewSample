@@ -1,4 +1,4 @@
-package com.nikhil.mynewsample.screen.register.login
+package com.nikhil.mynewsample.screen.login
 
 class LoginAuthenticationRequestModel(
     var userName: String?="abc",

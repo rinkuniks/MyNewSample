@@ -1,5 +1,4 @@
-package com.nikhil.mynewsample.screen.register.splash
-
+package com.nikhil.mynewsample.screen.splash
 
 import android.content.Intent
 import android.os.Bundle
