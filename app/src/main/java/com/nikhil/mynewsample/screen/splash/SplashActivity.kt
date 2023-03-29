@@ -1,11 +1,11 @@
-package com.nikhil.mynewsample.splash
+package com.nikhil.mynewsample.screen.register.splash
 
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.nikhil.mynewsample.R
-import com.nikhil.mynewsample.login.LoginActivity
+import com.nikhil.mynewsample.screen.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

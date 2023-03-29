@@ -1,4 +1,4 @@
-package com.nikhil.mynewsample.register
+package com.nikhil.mynewsample.screen.register
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

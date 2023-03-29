@@ -1,4 +1,4 @@
-package com.nikhil.mynewsample.login
+package com.nikhil.mynewsample.screen.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +8,8 @@ import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.nikhil.mynewsample.R
 import com.nikhil.mynewsample.databinding.ActivityLoginBinding
-import com.nikhil.mynewsample.register.RegisterActivity
+import com.nikhil.mynewsample.screen.register.RegisterActivity
+import com.nikhil.mynewsample.screen.register.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

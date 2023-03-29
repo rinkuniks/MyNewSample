@@ -1,4 +1,4 @@
-package com.nikhil.mynewsample.login
+package com.nikhil.mynewsample.screen.register.login
 
 import android.util.Log
 import androidx.lifecycle.LiveData
