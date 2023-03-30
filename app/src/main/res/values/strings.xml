@@ -27,4 +27,10 @@
     <string name="enter_old_password">Enter Old Password</string>
     <string name="re_enter_password">Re-Enter Password</string>
     <string name="create_password">Create Password</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_statistic">Statistics</string>
+    <string name="title_askDoubt">AskDoubt</string>
+    <string name="title_test">Test</string>
+    <string name="title_more">More</string>
 </resources>
