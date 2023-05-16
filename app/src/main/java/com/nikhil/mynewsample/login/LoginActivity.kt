@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import com.nikhil.mynewsample.R
 import com.nikhil.mynewsample.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,6 +26,7 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             enableLoginDetails()
         }
+        oberveDataFromApi()
     }
 
     fun enableLoginDetails() {
@@ -32,4 +34,10 @@ class LoginActivity : AppCompatActivity() {
         viewModel.loginApi()
     }
 
+   private fun oberveDataFromApi(){
+        viewModel.loginResponseApi.observe(this, Observer {
+            Log.d(TAG, "oberveDataFromApi: working${it.data?.name}")
+        })
+    }
+    
 }

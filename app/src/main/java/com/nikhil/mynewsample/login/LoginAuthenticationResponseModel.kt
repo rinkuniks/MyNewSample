@@ -1,6 +1,13 @@
 package com.nikhil.mynewsample.login
 
+import com.google.gson.annotations.SerializedName
 import com.nikhil.mynewsample.NikhilGenericApiResponse
 
-class LoginAuthenticationResponseModel: NikhilGenericApiResponse() {
-}
+data class LoginAuthenticationResponseModel(
+    @SerializedName("data")
+    val data: Data?,
+    @SerializedName("message")
+    val message: String? = "",
+    @SerializedName("id")
+    val Id: String? = ""
+) : NikhilGenericApiResponse()

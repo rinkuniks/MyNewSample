@@ -1,34 +1,36 @@
 package com.nikhil.mynewsample.login
 
-import android.database.Observable
 import android.util.Log
 import androidx.lifecycle.LiveData
 import com.nikhil.mynewsample.DataResource
 import com.nikhil.mynewsample.NetworkResource
-import com.nikhil.mynewsample.di.NetworkModule
 import javax.inject.Inject
 
 class LoginRepo @Inject constructor(var loginService: LoginService) {
     private val TAG = "LoginActivity"
 
     fun authoriseLoginDetails(loginAuthenticationRequestModel: LoginAuthenticationRequestModel)
-            : NetworkResource<LoginAuthenticationResponseModel> {
+            : LiveData<DataResource<LoginAuthenticationResponseModel?>> {
         Log.d(TAG, "authoriseLoginDetails:3 ")
-//        loginService.authoriseLoginDetails()
 
-        return object : NetworkResource<LoginAuthenticationResponseModel>() {
+        val abc = object : NetworkResource<LoginAuthenticationResponseModel>() {
 
-            override fun processResponse(data: LoginAuthenticationResponseModel)
-                    : DataResource<LoginAuthenticationResponseModel> {
-                TODO("Not yet implemented")
+            override var isLoading: Boolean = true
+
+            override fun processResponse(data: LoginAuthenticationResponseModel?)
+                    : DataResource<LoginAuthenticationResponseModel?> {
+                Log.d(TAG, "authoriseLoginDetails:9 ")
+                return DataResource.success(data?.code, data)
             }
 
-            override fun createCall(): LiveData<LoginAuthenticationResponseModel?> {
-                return loginService.authoriseLoginDetails()
+            override suspend fun createCall(): LoginAuthenticationResponseModel? {
+                Log.d(TAG, "authoriseLoginDetails:10 ")
+                return loginService.authoriseLoginDetails(loginAuthenticationRequestModel)
             }
 
         }
 
+        return abc.toLiveData()
     }
 
 }

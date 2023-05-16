@@ -1,5 +1,6 @@
 package com.nikhil.mynewsample.di
 
+import com.github.leonardoxh.livedatacalladapter.LiveDataCallAdapterFactory
 import com.nikhil.mynewsample.api.APIInterface
 import dagger.Module
 import dagger.Provides
@@ -45,7 +46,7 @@ object NetworkModule {
         gsonConverterFactory: GsonConverterFactory
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://imdb-api.com/en/")
+            .baseUrl("http://restapi.adequateshop.com/")
             .client(okHttpClient)
             .addConverterFactory(gsonConverterFactory)
             .build()
@@ -53,6 +54,6 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit)= retrofit.create(APIInterface::class.java)
+    fun provideApiService(retrofit: Retrofit) : APIInterface = retrofit.create(APIInterface::class.java)
 
 }

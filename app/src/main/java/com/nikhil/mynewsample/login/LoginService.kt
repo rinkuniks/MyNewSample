@@ -9,9 +9,9 @@ class LoginService @Inject constructor(private val  apiInterface: APIInterface) 
 
     private val TAG = "LoginActivity"
 
-     fun authoriseLoginDetails():LiveData<LoginAuthenticationResponseModel?> {
+   suspend fun authoriseLoginDetails(loginAuthenticationRequestModel: LoginAuthenticationRequestModel): LoginAuthenticationResponseModel? {
         Log.d(TAG, "authoriseLoginDetails: 4")
-        return apiInterface.userLogin()
+        return apiInterface.userLogin(loginAuthenticationRequestModel)
     }
 
 }

@@ -1,17 +1,17 @@
 package com.nikhil.mynewsample
 
-class DataResource<T>(val status: DataStatus?, val statusCode: String?, val data: T?) {
+class DataResource<T>(val status: DataStatus?, val statusCode: Int?, val data: T?) {
 
     companion object {
-        fun <T> success(statusCode: String?, data: T?): DataResource<T?> {
+        fun <T> success(statusCode: Int?, data: T?): DataResource<T?> {
             return DataResource(DataStatus.SUCCESS, statusCode, data)
         }
 
-        fun <T> loading(statusCode: String?, data: T?): DataResource<T> {
+        fun <T> loading(statusCode: Int?, data: T?): DataResource<T> {
             return DataResource(DataStatus.LOADING, statusCode, data)
         }
 
-        fun <T> error(statusCode: String?, data: T?): DataResource<T> {
+        fun <T> error(statusCode: Int?, data: T?): DataResource<T> {
             return DataResource(DataStatus.ERROR, statusCode, data)
         }
     }
