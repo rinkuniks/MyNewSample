@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#FFDCDCDC</color>
     <color name="carbon">#FF293542</color>
+    <color name="active">#7005E4</color>
 </resources>
