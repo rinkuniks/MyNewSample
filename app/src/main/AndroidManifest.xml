@@ -12,10 +12,10 @@
         android:theme="@style/Theme.MyNewSample"
         tools:targetApi="31">
         <activity
-            android:name=".CarousalViewActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".CarousalViewActivity"
             android:exported="true"
             android:theme="@style/MyNoActionBar">
             <intent-filter>
