@@ -27,7 +27,6 @@ class LoginRepo @Inject constructor(var loginService: LoginService) {
                 Log.d(TAG, "authoriseLoginDetails:10 ")
                 return loginService.authoriseLoginDetails(loginAuthenticationRequestModel)
             }
-
         }
 
         return abc.toLiveData()

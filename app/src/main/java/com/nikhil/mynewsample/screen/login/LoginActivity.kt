@@ -26,17 +26,17 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             enableLoginDetails()
         }
-        oberveDataFromApi()
+        observeDataFromApi()
     }
 
-    fun enableLoginDetails() {
+    private fun enableLoginDetails() {
         Log.d(TAG, "enableLoginDetails: 1")
         viewModel.loginApi()
     }
 
-   private fun oberveDataFromApi(){
+   private fun observeDataFromApi(){
         viewModel.loginResponseApi.observe(this, Observer {
-            Log.d(TAG, "oberveDataFromApi: working${it.data?.name}")
+            Log.d(TAG, "observeDataFromApi: working${it.data?.name}")
         })
     }
     
