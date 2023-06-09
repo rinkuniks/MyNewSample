@@ -1,12 +1,10 @@
 package com.nikhil.mynewsample
 
-
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
-import com.airbnb.lottie.LottieAnimationView
 import com.nikhil.mynewsample.adapters.ViewPagerAdapter
 import java.util.ArrayList
 
@@ -26,6 +24,11 @@ class CarousalViewActivity : AppCompatActivity() {
         dot2 = findViewById(R.id.dot2)
         dot3 = findViewById(R.id.dot3)
 
+        //set View page adapter
+        setAdapter()
+    }
+
+    private fun setAdapter() {
         val myAdapter = ViewPagerAdapter()
         myAdapter.myAnimeFileName = getAnimeList()
         viewPager2.adapter = myAdapter
@@ -61,21 +64,32 @@ class CarousalViewActivity : AppCompatActivity() {
     private fun changeColor() {
         when (viewPager2.currentItem) {
             0 -> {
-                dot1.setBackgroundColor(applicationContext.resources.getColor(R.color.active))
-                dot2.setBackgroundColor(applicationContext.resources.getColor(R.color.grey))
-                dot3.setBackgroundColor(applicationContext.resources.getColor(R.color.grey))
+                dot1.setBackgroundColor(ContextCompat.getColor(applicationContext,
+                    R.color.active))
+                dot2.setBackgroundColor(ContextCompat.getColor(applicationContext,
+                    R.color.inActive))
+                dot3.setBackgroundColor(ContextCompat.getColor(applicationContext,
+                    R.color.inActive))
             }
 
             1 -> {
-                dot1.setBackgroundColor(applicationContext.resources.getColor(R.color.grey))
-                dot2.setBackgroundColor(applicationContext.resources.getColor(R.color.active))
-                dot3.setBackgroundColor(applicationContext.resources.getColor(R.color.grey))
+
+
+                dot1.setBackgroundColor(ContextCompat.getColor(applicationContext,
+                    R.color.inActive))
+                dot2.setBackgroundColor(ContextCompat.getColor(applicationContext,
+                    R.color.active))
+                dot3.setBackgroundColor(ContextCompat.getColor(applicationContext,
+                    R.color.inActive))
             }
 
             2 -> {
-                dot1.setBackgroundColor(applicationContext.resources.getColor(R.color.grey))
-                dot2.setBackgroundColor(applicationContext.resources.getColor(R.color.grey))
-                dot3.setBackgroundColor(applicationContext.resources.getColor(R.color.active))
+                dot1.setBackgroundColor(ContextCompat.getColor(applicationContext,
+                    R.color.inActive))
+                dot2.setBackgroundColor(ContextCompat.getColor(applicationContext,
+                    R.color.inActive))
+                dot3.setBackgroundColor(ContextCompat.getColor(applicationContext,
+                    R.color.active))
             }
         }
     }

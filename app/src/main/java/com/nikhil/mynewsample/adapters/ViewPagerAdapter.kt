@@ -24,7 +24,6 @@ class ViewPagerAdapter() :
     override fun onBindViewHolder(holder: ViewPagerAdapter.ViewPagerViewHolder, position: Int) {
         val myImages = myAnimeFileName[position]
         holder.lottieAnime.setAnimation(myImages)
-//        holder.lottieAnime = myImages
     }
 
     override fun getItemCount(): Int {
