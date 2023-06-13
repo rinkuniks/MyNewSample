@@ -62,35 +62,41 @@ class CarousalViewActivity : AppCompatActivity() {
     }
 
     private fun changeColor() {
-        when (viewPager2.currentItem) {
-            0 -> {
-                dot1.setBackgroundColor(ContextCompat.getColor(applicationContext,
-                    R.color.active))
-                dot2.setBackgroundColor(ContextCompat.getColor(applicationContext,
-                    R.color.inActive))
-                dot3.setBackgroundColor(ContextCompat.getColor(applicationContext,
-                    R.color.inActive))
-            }
+        val activeColor = ContextCompat.getColor(applicationContext, R.color.active)
+        val inActiveColor = ContextCompat.getColor(applicationContext, R.color.inActive)
 
-            1 -> {
-
-
-                dot1.setBackgroundColor(ContextCompat.getColor(applicationContext,
-                    R.color.inActive))
-                dot2.setBackgroundColor(ContextCompat.getColor(applicationContext,
-                    R.color.active))
-                dot3.setBackgroundColor(ContextCompat.getColor(applicationContext,
-                    R.color.inActive))
-            }
-
-            2 -> {
-                dot1.setBackgroundColor(ContextCompat.getColor(applicationContext,
-                    R.color.inActive))
-                dot2.setBackgroundColor(ContextCompat.getColor(applicationContext,
-                    R.color.inActive))
-                dot3.setBackgroundColor(ContextCompat.getColor(applicationContext,
-                    R.color.active))
-            }
-        }
+        dot1.setBackgroundColor(if (viewPager2.currentItem == 0) activeColor else inActiveColor)
+        dot2.setBackgroundColor(if (viewPager2.currentItem == 1) activeColor else inActiveColor)
+        dot3.setBackgroundColor(if (viewPager2.currentItem == 2) activeColor else inActiveColor)
     }
+
+
+//    private fun changeColor() {
+//        when (viewPager2.currentItem) {
+//            0 -> {
+//                dot1.setBackgroundColor(ContextCompat.getColor(applicationContext,
+//                    R.color.active))
+//                dot2.setBackgroundColor(ContextCompat.getColor(applicationContext,
+//                    R.color.inActive))
+//                dot3.setBackgroundColor(ContextCompat.getColor(applicationContext,
+//                    R.color.inActive))
+//            }
+//            1 -> {
+//                dot1.setBackgroundColor(ContextCompat.getColor(applicationContext,
+//                    R.color.inActive))
+//                dot2.setBackgroundColor(ContextCompat.getColor(applicationContext,
+//                    R.color.active))
+//                dot3.setBackgroundColor(ContextCompat.getColor(applicationContext,
+//                    R.color.inActive))
+//            }
+//            2 -> {
+//                dot1.setBackgroundColor(ContextCompat.getColor(applicationContext,
+//                    R.color.inActive))
+//                dot2.setBackgroundColor(ContextCompat.getColor(applicationContext,
+//                    R.color.inActive))
+//                dot3.setBackgroundColor(ContextCompat.getColor(applicationContext,
+//                    R.color.active))
+//            }
+//        }
+//    }
 }
